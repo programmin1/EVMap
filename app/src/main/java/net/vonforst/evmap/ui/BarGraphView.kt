@@ -100,8 +100,8 @@ class BarGraphView(context: Context, attrs: AttributeSet) : View(context, attrs)
                 drawable.alpha = (inactiveAlpha * 255).roundToInt()
                 drawable.draw(canvas)
 
-                if (t.minute == 0 && i > 0) {
-                    val center = left.toFloat() - barMargin / 2
+                if (t.minute == 0) {
+                    val center = left.toFloat() + barWidth / 2
                     drawLine(
                         center, graphBounds.bottom.toFloat(),
                         center, graphBounds.bottom + legendLineLength, legendPaint
