@@ -9,6 +9,7 @@ import android.util.AttributeSet
 import android.view.View
 import androidx.appcompat.content.res.AppCompatResources
 import net.vonforst.evmap.R
+import java.time.ZoneId
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
@@ -107,7 +108,7 @@ class BarGraphView(context: Context, attrs: AttributeSet) : View(context, attrs)
                         center, graphBounds.bottom + legendLineLength, legendPaint
                     )
                     drawText(
-                        t.format(timeFormat),
+                        t.withZoneSameInstant(ZoneId.systemDefault()).format(timeFormat),
                         center, graphBounds.bottom + legendWidth, legendPaint
                     )
                 }
