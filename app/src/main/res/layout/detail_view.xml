@@ -402,6 +402,8 @@
                 android:layout_marginTop="4dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
+                android:background="?selectableItemBackgroundBorderless"
+                app:tint="@color/logo_tint_night"
                 app:goneUnless="@{predictionGraph != null}"
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toBottomOf="@+id/prediction"
